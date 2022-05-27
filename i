@@ -222,12 +222,12 @@ end
 function library:CreateWindow(name, hidebutton)
     local window = { }
     window.name = name or ""
-    window.size = UDim2.fromOffset(20, 300)
+    window.size = UDim2.fromOffset(492, 598)
     window.hidebutton = hidebutton or Enum.KeyCode.RightControl
     window.theme = library.theme
     local updateevent = Instance.new("BindableEvent")
     function window:UpdateTheme(theme)
-        updateevent:Fire(theme or library.theme)
+        updateevent:Fire(theme or library.theme)z
         window.theme = (theme or library.theme)
     end
     window.Main = Instance.new("ScreenGui", coregui)
